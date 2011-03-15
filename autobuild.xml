@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<llsd>
+<map>
+    <key>package_description</key>
+    <map>
+      <key>copyright</key>
+      <string>Copyright (c) 2004-2008 Ralf S. Engelschall &lt;rse@engelschall.com&gt;</string>
+      <key>description</key>
+      <string>OSSP uuid is a ISO-C:1999 application programming interface (API) and corresponding command line interface (CLI) for the generation of DCE 1.1, ISO/IEC 11578:1996 and RFC 4122 compliant Universally Unique Identifier (UUID). </string>
+      <key>license</key>
+      <string>  Copyright (c) 2004-2008 The OSSP Project &lt;http://www.ossp.org/&gt;</string>
+      <key>license_file</key>
+      <string>LICENSES/uuid.txt</string>
+      <key>name</key>
+      <string>uuid</string>
+      <key>platforms</key>
+      <map>
+        <key>linux</key>
+        <map>
+          <key>build_directory</key>
+          <string>stage</string>
+          <key>configurations</key>
+          <map>
+            <key>Release</key>
+            <map>
+              <key>build</key>
+              <map>
+                <key>arguments</key>
+                <array>
+                  <string>../build-cmd.sh</string>
+                </array>
+                <key>command</key>
+                <string>sh</string>
+              </map>
+              <key>default</key>
+              <string>True</string>
+              <key>name</key>
+              <string>Release</string>
+            </map>
+          </map>
+          <key>manifest</key>
+          <array>
+            <string>include/uuid.h</string>
+            <string>lib/release/*.so*</string>
+          </array>
+          <key>name</key>
+          <string>linux</string>
+        </map>
+      </map>
+      <key>version</key>
+      <string>1.6.2</string>
+    </map>
+    <key>type</key>
+    <string>autobuild</string>
+    <key>version</key>
+    <string>1.2</string>
+  </map>
+</llsd>
