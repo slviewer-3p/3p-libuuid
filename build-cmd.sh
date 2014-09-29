@@ -17,10 +17,6 @@ if [ -z "$AUTOBUILD" ] ; then
     fail
 fi
 
-if [ "$OSTYPE" = "cygwin" ] ; then
-    export AUTOBUILD="$(cygpath -u $AUTOBUILD)"
-fi
-
 # load autbuild provided shell functions and variables
 set +x
 eval "$("$AUTOBUILD" source_environment)"
@@ -50,6 +46,7 @@ esac
 
 mkdir -p "$stage/LICENSES"
 cp "$TOP/$SOURCE_DIR/$LICENSE" "$stage/LICENSES/$PROJECT.txt"
+echo "$VERSION" > "$stage/VERSION.txt"
 
 pass
 
