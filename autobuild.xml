@@ -3,6 +3,8 @@
 <map>
     <key>package_description</key>
     <map>
+      <key>canonical_repo</key>
+      <string>https://bitbucket.org/nickyd/3p-libuuid</string>
       <key>copyright</key>
       <string>Copyright (c) 2004-2008 Ralf S. Engelschall &lt;rse@engelschall.com&gt;</string>
       <key>description</key>
@@ -43,7 +45,7 @@
           <key>manifest</key>
           <array>
             <string>include/uuid.h</string>
-            <string>lib/release/*.so*</string>
+            <string>lib/release/*</string>
           </array>
           <key>name</key>
           <string>linux</string>

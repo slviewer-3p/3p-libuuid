@@ -24,12 +24,12 @@ set -x
 
 stage="$(pwd)"
 case "$AUTOBUILD_PLATFORM" in
-    "linux")
+    "linux64")
         pushd "$TOP/$SOURCE_DIR"
             # libtool was ingoring the LDFLAGS option so the only way to force
             # both the compile and link steps to use -m32 was to redefine CC
             # as below.  Sorry for the hack.
-            CC="$CC -m32" ./configure --prefix="$stage"
+            ./configure --prefix="$stage"
             make
             make install
         popd
@@ -48,5 +48,4 @@ mkdir -p "$stage/LICENSES"
 cp "$TOP/$SOURCE_DIR/$LICENSE" "$stage/LICENSES/$PROJECT.txt"
 echo "$VERSION" > "$stage/VERSION.txt"
 
-pass
 
