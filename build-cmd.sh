@@ -26,6 +26,7 @@ stage="$(pwd)"
 case "$AUTOBUILD_PLATFORM" in
     "linux64")
         pushd "$TOP/$SOURCE_DIR"
+		    autoreconf -fi
             # libtool was ingoring the LDFLAGS option so the only way to force
             # both the compile and link steps to use -m32 was to redefine CC
             # as below.  Sorry for the hack.
